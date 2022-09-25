@@ -11,8 +11,15 @@ public class Penjualan {
         this.harga_total = item_beli.getHarga() * quantity;
     }
     public void toPrint(){
-        System.out.println("DETAIL PEMBELIAN : ");
         System.out.printf("%-20s [%02d]  Rp. %.0f\n", nama_produk, quantity, harga_total);
+    }
+    public static double oountAllTotal(Penjualan[] items){
+        double total = 0;
+        for(Penjualan item: items){
+            if (item != null)
+                total += item.getHarga_total();
+        }
+        return total;
     }
     public String getNama_produk() {
         return nama_produk;
