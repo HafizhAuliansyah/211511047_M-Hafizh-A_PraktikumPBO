@@ -7,14 +7,11 @@ package studikasus2;
 abstract public class Shape {
     protected String shapeName;
     abstract double area();
-
     public Shape(String name) {
         this.shapeName = name;
     }
-    
     @Override
     public String toString() {
         return this.shapeName;
     }
-    
 }

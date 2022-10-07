@@ -10,6 +10,7 @@ public class Paint {
         coverage = c;
     }
     public double amount(Shape s){
+        // SOAL 3
         System.out.println("Counting amount for "+s.toString());
         return s.area() / coverage;
     }
